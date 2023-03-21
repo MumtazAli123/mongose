@@ -27,23 +27,26 @@ const saveInDB = async () => {
 const updateInDB =async  () => {
   const Product = mongoose.model('mydbs', productSchema);
   let data =await  Product.updateOne(
-      { name: "iPhone x max" },
+      { name: "mango ds" },
       {
-        $set: { price: 3450, name: 'nokia' }
+        $set: { price: 350, name: 'Nokia' }
       }
   )
   console.log(data)
 }
-updateInDB();
+// updateInDB();
 
-// const deleteInDB = async ()=>{
-//   const Product = mongoose.model('mydbs', productSchema);
-//   let data = await Product.deleteOne({name:'max 100'})
-//   console.log(data);
-// }
-// const findInDB = async ()=>{
-//   const Product = mongoose.model('mydbs', productSchema);
-//   let data = await Product.find({name:'max pro 611'})
-//   console.log(data);
-// }
+const deleteInDB = async ()=>{
+  const Product = mongoose.model('mydbs', productSchema);
+  let data = await Product.deleteOne({name:'Nokia'})
+  console.log(data);
+}
+// deleteInDB();
+
+const findInDB = async ()=>{
+  const Product = mongoose.model('mydbs', productSchema);
+  let data = await Product.find({name:'nokia 611'})
+  console.log(data);
+}
+findInDB();
 
