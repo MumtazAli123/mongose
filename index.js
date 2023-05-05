@@ -45,7 +45,7 @@ const deleteInDB = async ()=>{
 
 const findInDB = async ()=>{
   const Product = mongoose.model('mydbs', productSchema);
-  let data = await Product.find({name:'nokia 3310'})
+  let data = await Product.find({name:'nokia 330'})
   console.log(data);
 }
 findInDB(); 
